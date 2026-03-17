@@ -19,6 +19,7 @@
 html{
     font-family: Poppins;
     font-size: 62.5%;
+    /* text-wrap: balance; */
 }
 
 header{
@@ -27,8 +28,15 @@ header{
     padding-top: 2rem;
 }
 
-header h1, header img{
-    margin-bottom: 2rem;
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 1rem;
 }
 
 
@@ -42,17 +50,16 @@ header h1, header img{
     justify-content: center;
     align-items: center;
     gap: 3rem;
+    padding: 0 1.5em 5rem 1.5em;
 }
+  
 
-.card{
-    padding: 0 1em;
-}
+
 
 .card-image-container{
-    height: 25em;
-    width: 25em;
+    height: 20em;
+    width: 20em;
     margin: 1em 0 1em 0;
-    border: 1px solid black;
     border-radius: 1em;
 }
 
@@ -93,7 +100,87 @@ header h1, header img{
 
 
 
-/* 
-@media screen and (max-width: 600px){
+
+@media screen and (min-width: 600px){
+   .card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    }
+
+
+    .card-content{
+        flex-basis: 60%;
+    }
+
+    h1{
+        font-size: 3.5em;
+    }
+
+    h2{
+        font-size: 2em;
+    }
+ .card-image-container{
+    height: 25em;
+    width: 25em;
+    }
+}
    
-} */
+
+
+@media screen and (min-width: 1350px){
+
+    .card{
+        border: 1px solid black;
+        width: 100%;
+    }
+
+    header{
+        padding: 10rem 0 3rem 0;
+    }
+
+    .seperator{
+        width: 30rem;
+    }
+
+    .container{
+        padding-bottom: 20em;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    h1{
+        font-size: 3.5em;
+        padding:0 5em 1em 5em;
+    }
+
+    h2{
+        font-size: 2em;
+    }
+
+    .card-image-container{
+    height: 30em;
+    width: 30em;
+    margin: 1em 0 1em 0;
+    border-radius: 1em;
+    }
+
+    .card-content{
+        border: 1px solid black;
+        padding: 0 2em;
+    }
+
+    .img-1{
+    background: url("/resources/photo_1@2x.png") center/cover no-repeat;
+    }
+
+    .img-2{
+    background: url("/resources/photo_2@2x.png") center/cover no-repeat;
+    }
+
+    .img-3{
+    background: url("/resources/photo_3@2x.png") center/cover no-repeat;
+    }
+
+}
